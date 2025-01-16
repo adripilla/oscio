@@ -8,6 +8,7 @@ export default function MovieCard({ title, releaseYear, duration, genres, poster
 
   const handleAction = (actionType) => {
     alert(`${actionType} action`);
+    window.location.reload();
   };
 
   const toggleSimilarVisibility = () => {
