@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
+import Loading from './Loading';
 
 export default function Peliculas() {
   const [movie, setMovie] = useState(null);
@@ -54,7 +55,11 @@ export default function Peliculas() {
   }
 
   if (!movie || !movieId) {
-    return <p>Cargando...</p>; // Mostrar mensaje de carga si no se ha obtenido la película
+    return(
+        <div className="container mx-auto p-2 h-full">
+            <Loading/>
+         </div>
+    ); // Mostrar mensaje de carga si no se ha obtenido la película
   }
 
   return (
